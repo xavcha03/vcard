@@ -2,19 +2,12 @@ body {
   background: linear-gradient(115.56deg, #051923 0.3%, #154a64 34.32%);
   height: 100vh;
 
-  display: flex;
-  align-items: center;
-
   font-family: "Roboto", sans-serif;
 }
 
 #vcard {
-  margin: 0 auto;
+  margin: 10% auto;
   padding: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   width: 600px;
 
@@ -23,10 +16,13 @@ body {
   background-color: #02202f;
 
   color: white;
+
+  text-align: center;
+  display: grid;
 }
 
 #vcard img {
-  width: 100px;
+  margin: 0 auto;
 }
 
 h1,
@@ -50,8 +46,18 @@ h3 {
 }
 
 .contact {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+}
+
+.contact li:first-child {
+  text-align: right;
+}
+
+.contact li:nth-child(2) {
+  text-align: left;
 }
 
 .contact li {
@@ -71,16 +77,15 @@ h3 {
 }
 
 .skills {
-  display: flex;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin-top: 2em;
 }
 
-.skills li {
-  margin: 0 1em;
-  text-align: center;
+.skills ul:first-child {
+  text-align: right;
 }
 
-.skills li ul li {
-  text-align: center;
+.contact ul:nth-child(2) {
+  text-align: left;
 }
